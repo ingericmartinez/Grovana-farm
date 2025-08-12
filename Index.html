@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grovana Farm - ¡La Granja en tu Escuela!</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon (Emoji de Gallina) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐔</text></svg>">
+
+    <style>
+        /* Estilos personalizados y configuración de fuentes de Tailwind */
+        body {
+            font-family: 'Nunito', sans-serif;
+        }
+        .font-fredoka {
+            font-family: 'Fredoka One', cursive;
+        }
+        .bg-farm {
+            background-color: #f0f9e8;
+            background-image: 
+                radial-gradient(circle at 100% 0, #a7e6a7 0, #a7e6a7 10%, transparent 10%),
+                radial-gradient(circle at 0 100%, #a7e6a7 0, #a7e6a7 10%, transparent 10%);
+        }
+    </style>
+</head>
+<body class="bg-lime-50 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-sky-400 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <span class="text-white text-3xl mr-2">🚜</span>
+                <a href="#" class="font-fredoka text-white text-3xl">Grovana Farm</a>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#animalitos" class="text-white hover:text-yellow-300 transition duration-300">Animalitos</a>
+                <a href="#nosotros" class="text-white hover:text-yellow-300 transition duration-300">Nosotros</a>
+                <a href="#contacto" class="bg-yellow-400 text-yellow-900 font-bold px-4 py-2 rounded-full hover:bg-yellow-500 transition duration-300 shadow-md">¡Visítanos!</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-white text-3xl">☰</button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-sky-500 p-4">
+            <a href="#animalitos" class="block text-white py-2 text-center">Animalitos</a>
+            <a href="#nosotros" class="block text-white py-2 text-center">Nosotros</a>
+            <a href="#contacto" class="block bg-yellow-400 text-yellow-900 font-bold mt-2 py-2 rounded-full text-center">¡Visítanos!</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main class="bg-farm">
+        <section class="container mx-auto px-6 py-20 text-center">
+            <h1 class="font-fredoka text-5xl md:text-7xl text-green-700">¡La Granja va a tu Escuela!</h1>
+            <p class="mt-4 text-xl text-gray-600 max-w-2xl mx-auto">Una experiencia educativa inolvidable donde los niños aprenden y se divierten con nuestros adorables animalitos.</p>
+            <a href="#animalitos" class="mt-8 inline-block bg-red-500 text-white font-bold text-xl px-8 py-4 rounded-full shadow-lg hover:bg-red-600 transform hover:scale-105 transition-all duration-300">
+                Conoce a la pandilla
+            </a>
+        </section>
+
+        <!-- Animalitos Section -->
+        <section id="animalitos" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="font-fredoka text-4xl text-center text-yellow-800 mb-12">Nuestros Amiguitos</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                    
+                    <!-- Card Chivitos -->
+                    <div class="bg-white rounded-2xl shadow-xl overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 text-center p-6 border-b-8 border-green-400">
+                        <img src="https://placehold.co/400x300/C8E6C9/4CAF50?text=🐐" alt="Chivitos adorables" class="w-full h-48 object-cover rounded-lg mb-4">
+                        <h3 class="font-fredoka text-3xl text-green-700">Los Chivitos</h3>
+                        <p class="mt-2 text-gray-600">Pequeños y juguetones, les encanta saltar y que les rasquen detrás de las orejas.</p>
+                        <button onclick="playSound('bee')" class="mt-4 bg-green-500 text-white px-6 py-2 rounded-full font-bold hover:bg-green-600">¡Bee, bee!</button>
+                    </div>
+
+                    <!-- Card Gallinas -->
+                    <div class="bg-white rounded-2xl shadow-xl overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 text-center p-6 border-b-8 border-red-400">
+                        <img src="https://placehold.co/400x300/FFCDD2/F44336?text=🐔" alt="Gallinas felices" class="w-full h-48 object-cover rounded-lg mb-4">
+                        <h3 class="font-fredoka text-3xl text-red-700">Las Gallinas</h3>
+                        <p class="mt-2 text-gray-600">Nuestras amigas emplumadas que nos enseñan de dónde vienen los huevitos.</p>
+                        <button onclick="playSound('kikiriki')" class="mt-4 bg-red-500 text-white px-6 py-2 rounded-full font-bold hover:bg-red-600">¡Kikirikí!</button>
+                    </div>
+
+                    <!-- Card Becerros -->
+                    <div class="bg-white rounded-2xl shadow-xl overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 text-center p-6 border-b-8 border-blue-400">
+                        <img src="https://placehold.co/400x300/BBDEFB/2196F3?text=🐮" alt="Becerros tiernos" class="w-full h-48 object-cover rounded-lg mb-4">
+                        <h3 class="font-fredoka text-3xl text-blue-700">Los Becerros</h3>
+                        <p class="mt-2 text-gray-600">Con sus grandes ojos y su ternura, los becerritos te robarán el corazón.</p>
+                        <button onclick="playSound('muu')" class="mt-4 bg-blue-500 text-white px-6 py-2 rounded-full font-bold hover:bg-blue-600">¡Muu, muu!</button>
+                    </div>
+
+                    <!-- Card Patitos -->
+                    <div class="bg-white rounded-2xl shadow-xl overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 text-center p-6 border-b-8 border-yellow-400">
+                        <img src="https://placehold.co/400x300/FFF9C4/FFEB3B?text=🦆" alt="Patitos simpáticos" class="w-full h-48 object-cover rounded-lg mb-4">
+                        <h3 class="font-fredoka text-3xl text-yellow-700">Los Patitos</h3>
+                        <p class="mt-2 text-gray-600">Siempre en fila, les encanta chapotear y seguir a su mamá a todos lados.</p>
+                        <button onclick="playSound('cuac')" class="mt-4 bg-yellow-500 text-white px-6 py-2 rounded-full font-bold hover:bg-yellow-600">¡Cuac, cuac!</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Nosotros Section -->
+        <section id="nosotros" class="py-20 bg-lime-100">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="font-fredoka text-4xl text-green-800 mb-6">Nuestra Misión</h2>
+                <p class="max-w-3xl mx-auto text-lg text-gray-700">
+                    En Grovana Farm, creemos en el poder del aprendizaje a través del juego y el contacto con la naturaleza. Llevamos una granjita móvil segura y controlada a los preescolares para crear una conexión real entre los niños y los animales, fomentando el respeto y el amor por el medio ambiente de una manera divertida y memorable.
+                </p>
+            </div>
+        </section>
+
+        <!-- Contacto Section -->
+        <section id="contacto" class="py-20 bg-farm">
+            <div class="container mx-auto px-6 text-center">
+                 <h2 class="font-fredoka text-4xl text-sky-800 mb-6">¿Quieres que te visitemos?</h2>
+                 <p class="max-w-2xl mx-auto text-lg text-gray-700 mb-8">
+                     ¡Es muy fácil! Escríbenos un correo y nos pondremos en contacto para agendar una visita inolvidable a tu escuela.
+                 </p>
+                 <a href="mailto:hola@grovanafarm.com?subject=Interesado en una visita de Grovana Farm" class="bg-sky-500 text-white font-bold text-xl px-10 py-4 rounded-full shadow-lg hover:bg-sky-600 transform hover:scale-105 transition-all duration-300">
+                    ¡Contactar Ahora!
+                 </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-green-800 py-8">
+        <div class="container mx-auto px-6 text-center text-white">
+            <p class="font-fredoka text-2xl">Grovana Farm</p>
+            <p class="mt-2">&copy; 2025 - Todos los derechos reservados. ¡La granja más divertida!</p>
+        </div>
+    </footer>
+
+    <script>
+        // Lógica para el menú móvil
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Lógica para los sonidos de animales (simulado con alertas)
+        // En una aplicación real, usaríamos AudioContext para una mejor experiencia sin pop-ups.
+        function playSound(animal) {
+            let sound = '';
+            switch(animal) {
+                case 'bee':
+                    sound = '¡Beeee! El chivito te saluda.';
+                    break;
+                case 'kikiriki':
+                    sound = '¡Kikirikí! La gallina canta para ti.';
+                    break;
+                case 'muu':
+                    sound = '¡Muuuu! El becerrito está feliz de verte.';
+                    break;
+                case 'cuac':
+                    sound = '¡Cuac, cuac! El patito te invita a jugar.';
+                    break;
+            }
+            // Usamos un modal personalizado en lugar de alert() para una mejor estética.
+            showCustomAlert(sound);
+        }
+
+        function showCustomAlert(message) {
+            // Eliminar alerta anterior si existe
+            const oldAlert = document.getElementById('custom-alert');
+            if (oldAlert) {
+                oldAlert.remove();
+            }
+
+            // Crear elementos del modal
+            const alertContainer = document.createElement('div');
+            alertContainer.id = 'custom-alert';
+            alertContainer.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50';
+            
+            const alertBox = document.createElement('div');
+            alertBox.className = 'bg-white rounded-lg p-8 shadow-2xl text-center transform scale-95 transition-transform duration-300';
+            
+            const alertMessage = document.createElement('p');
+            alertMessage.className = 'text-xl font-fredoka text-gray-700 mb-6';
+            alertMessage.textContent = message;
+            
+            const closeButton = document.createElement('button');
+            closeButton.className = 'bg-red-500 text-white px-6 py-2 rounded-full font-bold hover:bg-red-600';
+            closeButton.textContent = 'Cerrar';
+
+            // Ensamblar modal
+            alertBox.appendChild(alertMessage);
+            alertBox.appendChild(closeButton);
+            alertContainer.appendChild(alertBox);
+            document.body.appendChild(alertContainer);
+            
+            // Animar la entrada
+            setTimeout(() => alertBox.classList.remove('scale-95'), 10);
+
+            // Evento para cerrar
+            closeButton.addEventListener('click', () => {
+                alertContainer.remove();
+            });
+            alertContainer.addEventListener('click', (e) => {
+                if (e.target === alertContainer) {
+                    alertContainer.remove();
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>
